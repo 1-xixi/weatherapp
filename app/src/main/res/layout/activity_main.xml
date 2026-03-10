@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    tools:context=".MainActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="简易天气查询"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- 输入城市 + 查询按钮 -->
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:hint="请输入城市名（如：北京）"
+            android:padding="12dp"
+            android:inputType="textCapWords"/>
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询"
+            android:backgroundTint="#4299e1"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="20dp"/>
+    </LinearLayout>
+
+    <!-- 天气情况 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天气情况:"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/wea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="晴天"/>
+    </LinearLayout>
+
+    <!-- 实况温度 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实况温度:"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/tem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="20"/>
+    </LinearLayout>
+
+    <!-- 今日风级 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日风级:"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/winSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="3级"/>
+    </LinearLayout>
+
+    <!-- 今日日期 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日日期:"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="2022-05-05"/>
+    </LinearLayout>
+
+</LinearLayout>
